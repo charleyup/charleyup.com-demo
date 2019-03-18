@@ -1,0 +1,18 @@
+extends layout.pug
+block head
+    link(
+        rel="stylesheet"
+        href="/style/home.css"
+        )
+block content
+    div.home-page
+        p.line
+            span.title NOTES
+        ul.posts-list
+            each post in notes
+                li
+                    - var href = "/post/" + post.id + "/" + post.slug
+                    a.title(
+                        href = href
+                        ) #{post.title}
+                        span.createTime （#{post.createTime}）

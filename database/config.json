@@ -1,0 +1,17 @@
+{
+    "development": {
+        "username": "root",
+        "password": null,
+        "database": "charleyup.com_local",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "xxx",
+        "password": "xxx",
+        "database": "charleyup.com",
+        "host": "xxx",
+        "dialect": "mysql",
+        "port": 3306
+    }
+}

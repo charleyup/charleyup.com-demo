@@ -1,0 +1,40 @@
+doctype html
+html(lang = "zh-cn")
+    head
+        meta(
+            http-equiv="Content-Type"
+            content="text/html; charset=UTF-8"
+            )
+        title #{title}
+        meta(
+            name="description"
+            content=description
+            )
+        meta(
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+            )
+        link(
+            rel="stylesheet"
+            href="//at.alicdn.com/t/font_569133_ezjz665h0xljif6r.css"
+            )
+        link(
+            rel="stylesheet"
+            href="/style/reset.css"
+            )
+        block head
+    body
+        header
+            img.avatar(src="/images/avatar.jpeg")
+            p.name charleyup
+            p.description charley up, charley never give up.
+            p.navigations
+                a(href="/")
+                    i.iconfont.icon-homepage(title = "首页")
+                a(href="/note")
+                    i.iconfont.icon-activity(title = "笔记")
+        div.main
+            block content
+        footer
+            p ©2016-2018 charleyup.com 闽ICP备17026635号-2
+script(src="/js/baidu_tongji.js")

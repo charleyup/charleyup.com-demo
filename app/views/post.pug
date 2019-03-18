@@ -1,0 +1,28 @@
+extends layout.pug
+block head
+    link(
+        rel="stylesheet"
+        href="/style/post.css"
+        )
+    link(
+        rel="stylesheet"
+        href="/style/markdown.css"
+        )
+    link(
+        rel="stylesheet"
+        href="/style/solarized-light.css"
+        )
+    script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js")
+    script hljs.initHighlightingOnLoad()
+block content
+    div.post-page
+        h1.title #{post.title}
+        p.createTime #{post.createTime}
+        p.count
+            i.iconfont.icon-view  #{post.hits} &nbsp;&nbsp;
+            i.iconfont.icon-like_fill  #{post.likes || 0} &nbsp;&nbsp;
+            i.iconfont.icon-interactive_fill  #{post.comments || 0}
+        div.markdown-body !{post.content}
+        div.appreciation-wrap
+            //- p 微信扫描赞赏码赞助此文
+            img(src="/images/appreciation.JPG")

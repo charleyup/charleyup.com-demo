@@ -1,0 +1,40 @@
+extends layout.pug
+block head
+    link(
+        rel="stylesheet"
+        href="/style/home.css"
+        )
+block content
+    div.home-page
+        each val, key in posts
+            p.line
+                span.title #{key}
+            ul.posts-list
+                each post in val
+                    li
+                        - var href = "/post/" + post.id + "/" + post.slug
+                        a.title(
+                            href = href
+                            ) #{post.title}
+                            span.createTime （#{post.createTime}）
+        p.line
+            span.title LINKS
+        ul.links
+            li
+                span(
+                    style="color: #333333;") Github：
+                a(
+                    href="https://github.com/charleyup"
+                    target="_blank"
+                    ) charleyup
+            li
+                span(style="color: #E80025;") Weibo：
+                a(
+                    href="https://weibo.com/u/7017503647"
+                    target="_blank"
+                    ) 不想睡觉又困的不行的cloud
+            li
+                span(style="color: #0C9DF2;") Mail：
+                a(
+                    href="mailto:lewis1990.amoy@hotmail.com"
+                    ) lewis1990.amoy@hotmail.com

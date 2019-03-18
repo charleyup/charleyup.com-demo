@@ -1,0 +1,29 @@
+.post-page {
+    padding: 0 20px;
+}
+
+.post-page > .title {
+    margin-bottom: 10px;
+}
+.post-page > .createTime {
+    margin-bottom: 10px;
+    color: gray;
+}
+.post-page .count {
+    margin-bottom: 30px;
+    color: gray;
+}
+.post-page  .appreciation-wrap {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 0;
+    border-top: 1px solid #ccc;
+}
+.post-page  .appreciation-wrap > p {
+    margin-bottom: 10px;
+}
+.post-page  .appreciation-wrap > img {
+    width: 320px;
+    max-width: 70%;
+}

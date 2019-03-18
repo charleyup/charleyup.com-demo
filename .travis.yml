@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+    - "8"
+cache: yarn
+branches:
+    only:
+        - master
+install: true
+script: true
+after_success:
+    - chmod 700 ./id_rsa_travis
+    - ssh -i ./id_rsa_travis -o StrictHostKeyChecking=no root@47.107.57.222 'cd charleyup.com && git pull && yarn && yarn db:prod && pm2 reload charleyup.com'

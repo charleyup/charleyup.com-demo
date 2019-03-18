@@ -1,0 +1,60 @@
+.home-page {
+    padding: 0 10px;
+}
+
+.home-page ul.posts-list {
+    margin-bottom: 30px;
+    padding: 0 10px;
+    list-style: none;
+}
+.home-page ul.posts-list li {
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.home-page ul.posts-list li .title {
+    color: #333;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.home-page ul.posts-list li .createTime {
+    font-size: 12px;
+}
+
+.home-page .line {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.home-page .line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 1px;
+    background-color: #A7ADBA;
+}
+
+.home-page .line > span.title {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #A7ADBA;
+    background-color: white;
+}
+.home-page  ul.links {
+    list-style: none;
+}
+.home-page  ul.links li > span {
+    font-weight: bold;
+}
+.home-page  ul.links li > a {
+    color: #555;
+    text-decoration: underline;
+    position: relative;
+}
